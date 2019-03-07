@@ -11,8 +11,7 @@ exports.view = function(req, res){
 		"date": "March 7",
 		"image": "debug.png"
 	}];
-
-  	labs.push(todaysLab);
+  	Array.prototype.push.apply(labs,todaysLab);
   }
 
   res.render('index', {
